@@ -1,0 +1,87 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f8ff;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.envelope {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background: #fff;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.flap {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform-origin: top;
+    transform: rotateX(0deg);
+    transition: transform 0.5s ease;
+    z-index: 2;
+}
+
+.letter {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #ffebef;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+textarea {
+    width: 90%;
+    height: 90%;
+    background: #ffebef;
+    border: none;
+    resize: none;
+    font-size: 16px;
+    padding: 10px;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+.heart {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    z-index: 3;
+}
+
+.heart:before,
+.heart:after {
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: red;
+    border-radius: 50%;
+}
+
+.heart:before {
+    top: -20px;
+    left: 0;
+}
+
+.heart:after {
+    left: -20px;
+    top: 0;
+}
